@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WE ECRM Extractor — Enterprise v3.0</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="/static/ecrm.css?v=20260919-v10" />
+</head>
+<body class="ecrm-body">
+<div class="app-shell">
+  <aside class="ecrm-sidebar" id="sidebar">
+    <div class="brand-block">
+      <div class="we-logo">WE</div>
+      <div><div class="brand-name">ECRM Extractor</div><div class="brand-version">Enterprise Edition v3.0</div></div>
+      <button id="sidebarToggle" class="collapse-btn" title="Collapse sidebar">☰</button>
+    </div>
+
+    <div class="sidebar-connection">
+      <span id="sideDot" class="connection-dot"></span>
+      <div><strong id="sideStatusText">ECRM ONLINE</strong><small id="sideStatusSub">System is ready to extract data</small></div>
+    </div>
+
+    <nav class="side-nav">
+      <div class="nav-label">WORKSPACE</div>
+      <button class="side-item active" data-nav="extract"><span class="nav-ico">⌂</span><span>Dashboard</span></button>
+      <button class="side-item" data-nav="extract"><span class="nav-ico">ϟ</span><span>ECRM Extraction</span></button>
+      <button class="side-item" data-nav="extract"><span class="nav-ico">▤</span><span>WO Extractor</span></button>
+      <button class="side-item" data-nav="extract"><span class="nav-ico">▣</span><span>DB Automation</span></button>
+      <button class="side-item" data-nav="extract"><span class="nav-ico">◫</span><span>FTTH Portal</span></button>
+      <button class="side-item" data-nav="extract"><span class="nav-ico">⌁</span><span>PSC Extractor</span></button>
+      <div class="nav-label">MANAGEMENT</div>
+      <button class="side-item" data-nav="results"><span class="nav-ico">▥</span><span>Results</span></button>
+      <button class="side-item" data-nav="history"><span class="nav-ico">◷</span><span>History</span></button>
+      <button class="side-item" data-nav="presets"><span class="nav-ico">☆</span><span>Presets</span></button>
+      <div class="nav-label">AI &amp; SUPPORT</div>
+      <button class="side-item" data-nav="copilot"><span class="nav-ico ai">✦</span><span>AI Copilot</span><b class="beta">Beta</b></button>
+      <button class="side-item" data-nav="settings"><span class="nav-ico">▧</span><span>Reports</span></button>
+      <div class="nav-label">SYSTEM</div>
+      <button class="side-item" id="sideCredentialsBtn"><span class="nav-ico">♙</span><span>Credentials</span></button>
+      <button class="side-item" data-nav="settings"><span class="nav-ico">⚙</span><span>Settings</span></button>
+      <button class="side-item" data-nav="settings"><span class="nav-ico">ⓘ</span><span>About</span></button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="footer-we">WE</div><div>Powered by Automation</div><div>For a Better Network</div>
+      <div class="footer-status"><span></span> v3.0.0</div>
+    </div>
+  </aside>
+
+  <main class="ecrm-main">
+    <header class="topbar">
+      <div class="search-wrap"><span>⌕</span><input id="globalSearch" type="search" placeholder="Search jobs, orders, CID, SO, ORD ..." /><kbd>Ctrl K</kbd></div>
+      <div class="topbar-actions">
+        <button class="top-status" id="webConnectionBadge"><span></span>ECRM ONLINE</button>
+        <button id="themeToggle" class="theme-select" title="Toggle theme">☼ <span class="theme-label">Dark</span>⌄</button>
+        <button class="icon-btn notification-btn" title="Notifications">♧<i>3</i></button>
+        <button class="icon-btn" id="settingsTopBtn" title="Settings">⚙</button>
+        <button id="credentialsBtn" class="account-btn" title="ECRM account"><div class="avatar" id="topAvatar">MA</div><div><strong id="topUserName">ECRM User</strong><small>Network Engineer</small></div><span>⌄</span></button>
+      </div>
+    </header>
+
+    <div class="content-wrap">
+      <section class="page-head">
+        <div><h1>Good Evening, <span id="greetingUser">ECRM User</span> <span class="wave">👋</span></h1><p>Manage your ECRM extractions, results and automation from one place.</p></div>
+        <div class="date-box"><small id="dateLabel">Thursday, 18 September 2026</small><strong id="clock">12:36 AM</strong></div>
+      </section>
+      <section class="stats-grid">
+        <div class="stat-card blue"><div class="stat-icon">▤</div><div><small>ECRM Jobs</small><strong id="statJobs">0</strong><span>Actual recorded ECRM jobs</span></div></div>
+        <div class="stat-card green"><div class="stat-icon">✓</div><div><small>Completed</small><strong id="statSuccess">0</strong><span>Actual successful jobs</span></div></div>
+        <div class="stat-card red"><div class="stat-icon">×</div><div><small>Failed</small><strong id="statFailed">0</strong><span>Actual failed jobs</span></div></div>
+        <div class="stat-card purple"><div class="stat-icon">▤</div><div><small>Generated Files</small><strong id="statFiles">0</strong><span>Existing ECRM result files</span></div></div>
+        <div class="stat-card orange"><div class="stat-icon">▤</div><div><small>Records</small><strong id="statRecords">0</strong><span>Rows in generated results</span></div></div>
+        <div class="stat-card cyan"><div class="stat-icon">◷</div><div><small>Average Duration</small><strong id="statAvg">—</strong><span>Measured from actual jobs</span></div></div>
+      </section>
+      <section class="panel realDataNotice"><div class="sectiontitle"><div><h2>Live ECRM Tool</h2><p class="sub">Suite-wide analytics are shown on the main dashboard. This page is only the ECRM workflow and uses real ECRM execution history.</p></div><span class="dataBadge">REAL ENGINE</span></div></section>
+
+      <section class="workspace-grid">
+        <div class="card extraction-card">
+          <div class="card-title-row"><div><h2>↥ New Extraction</h2><p>Configure and launch a new ECRM data extraction</p></div><span class="secure-chip">● Local processing</span></div>
+          <div class="steps"><div class="step active"><b>1</b><span>Input<small>Select mode</small></span></div><i></i><div class="step"><b>2</b><span>Data Source<small>File or values</small></span></div><i></i><div class="step"><b>3</b><span>Fields<small>Select fields</small></span></div><i></i><div class="step"><b>4</b><span>Options<small>Configure</small></span></div><i></i><div class="step"><b>5</b><span>Review<small>Confirm &amp; Run</small></span></div></div>
+          <div class="mode-tabs" id="modeTabs"><button class="mode-tab active" data-mode="ORDER">ORDER</button><button class="mode-tab" data-mode="CID">CID</button><button class="mode-tab" data-mode="SO">SO</button><button class="mode-tab" data-mode="ORD">ORD</button></div>
+          <div class="input-zone"><label class="dropzone"><span class="upload-icon">⇧</span><strong>Drag &amp; Drop Excel File Here</strong><small>or click to browse</small><em>Supported: .xlsx, .xls</em><input id="fileInput" type="file" accept=".xlsx,.xls" hidden /></label><div class="or">OR</div><div class="paste-zone"><div class="mini-label">▣ Paste Values <small>(one per line or comma separated)</small></div><textarea id="directValues" placeholder="Paste orders here...\n\n6100965\n6100966\n6100967"></textarea><div class="input-meta"><span id="directCount">0 added</span><button id="clearDirect">Clear</button></div></div></div>
+          <div class="hidden"><input id="filePath" type="text"/><input id="username" type="text"/><input id="password" type="password"/><input id="debugMode" type="checkbox"/></div>
+          <div class="extraction-footer"><button id="clearAllBtn" class="btn-ghost-action">↺ Reset</button><div><button id="cancelBtn" class="btn-danger-soft" disabled>Cancel</button><button id="startBtn" class="btn-primary large">🚀 Start Extraction</button></div></div>
+        </div>
+
+        <aside class="card copilot-card"><div class="copilot-head"><div><h2>✦ AI Copilot <span>Beta</span></h2><p>Ask me anything about ECRM extraction...</p></div><button class="close-mini">×</button></div><div class="user-bubble">What fields should I use for migration orders?</div><div class="ai-response">For migration orders, I recommend:<div class="ai-check">✓ Order</div><div class="ai-check">✓ Old Circuit ID</div><div class="ai-check">✓ New Circuit ID</div><div class="ai-check">✓ Old ORD</div><div class="ai-check">✓ New ORD</div><div class="ai-check">✓ Infra Status</div><div class="ai-check">✓ ESPT Status</div><button class="apply-ai">Apply These Fields</button></div><div class="suggestions"><button>Extract CID and Speed</button><button>Show customer fields</button></div><div class="chat-input"><input id="copilotInput" placeholder="Type your question..."/><button id="copilotSend">➤</button></div></aside>
+      </section>
+
+      <section class="card fields-card"><div class="card-title-row fields-head"><div><h2>▥ Data Fields</h2><p>Select the fields to include in your Excel result</p></div><div class="field-actions"><span id="fieldsCount" class="count-pill">0 selected</span><button id="selectAllBtn">Select All</button><button id="clearFieldsBtn">Clear All</button><input id="fieldSearch" type="search" placeholder="⌕ Search fields..."/></div></div><div id="fieldsGrid" class="fields-grid"></div><div id="fieldsEmpty" class="empty-state hidden"><p>No matching fields found</p></div></section>
+
+      <section class="bottom-grid">
+        <section class="card recent-card"><div class="card-title-row"><div><h2>▤ Recent Jobs</h2><p>Your latest extraction activity</p></div><button id="historyBtn" class="link-btn">View All →</button></div><div class="recent-table"><div class="recent-head"><span>#</span><span>Date &amp; Time</span><span>Mode</span><span>Records</span><span>Success</span><span>Failed</span><span>Duration</span><span>Status</span><span>File</span></div><div id="recentJobs"><div class="empty-row">No extraction jobs yet</div></div></div></section>
+        <aside class="card system-card"><div class="card-title-row"><h2>⚙ System Status</h2><span class="system-ok">● All Systems Operational</span></div><div class="system-list"><div><span><i class="online"></i>ECRM Connection</span><b>Online</b></div><div><span><i class="online"></i>FTTH Portal</span><b>Online</b></div><div><span><i class="online"></i>Chrome Driver</span><b>Ready</b></div><div><span><i class="online"></i>Playwright</span><b>Ready</b></div><div><span><i class="online"></i>Database</span><b>Connected</b></div><div><span><i class="online"></i>AI Engine (Ollama)</span><b>Online</b></div></div></aside>
+      </section>
+
+      <div class="bottom-status"><span>● ECRM Connection: <b>Online</b></span><span>● AI: Local (Ollama)</span><span>☼ Theme: <b>Dark</b></span><span>▣ EN</span><span class="status-right">WE ECRM Extractor v3.0</span></div>
+    </div>
+  </main>
+</div>
+
+<div id="credentialsModal" class="modal hidden" role="dialog" aria-modal="true"><div class="modal-card credentials-modal-card"><div class="modal-head"><div><div class="modal-title">🔐 ECRM Credentials</div><div class="modal-subtitle">Username is detected automatically from your Windows account. Enter your ECRM password once.</div></div><button id="credentialsClose" class="btn btn-ghost btn-sm">✕</button></div><div class="credentials-form"><label for="credentialsUsername">Windows / ECRM Username</label><input id="credentialsUsername" type="text" autocomplete="username" placeholder="Detecting username..." readonly tabindex="-1"><label for="credentialsPassword">ECRM Password</label><div class="password-wrap"><input id="credentialsPassword" type="password" autocomplete="current-password" placeholder="Enter ECRM password"><button id="togglePassword" type="button">Show</button></div><label class="check-line"><input id="credentialsDebug" type="checkbox"> Debug mode (save raw JSON to RR_DEBUG)</label><div class="credentials-note">🔒 Username is detected automatically and locked. Enter the password once; it is saved securely for this Windows user.</div><div class="credentials-actions"><button id="credentialsCancel" class="btn btn-ghost">Cancel</button><button id="credentialsSave" class="btn btn-primary">Save Password</button></div></div></div></div>
+<section id="logPanel" class="log-panel hidden"><div class="log-panel-head"><div class="log-panel-title"><span class="dot-live"></span><span id="logTitle">ECRM Extraction</span></div><div class="log-panel-actions"><span id="logJobStatus" class="pill pill-info">Running</span><button id="downloadBtn" class="btn btn-primary btn-sm hidden">⬇ Download Excel</button><button id="clearLogBtn" class="btn btn-ghost btn-sm">Clear</button><button id="hideLogBtn" class="btn btn-ghost btn-sm">Hide</button></div></div><pre id="logOutput" class="log-output"></pre><div class="progress-mini"><div id="progress"></div></div><div id="progressText" class="progress-text">0%</div><span id="runStatus" class="hidden"></span></section>
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true"><div class="modal-card"><div class="modal-head"><div class="modal-title" id="modalTitle">Title</div><button id="modalClose" class="btn btn-ghost btn-sm">✕</button></div><div id="modalBody" class="modal-body"></div></div></div>
+<div id="toastHost" class="toast-host"></div>
+<script src="/static/ecrm.js?v=20260919-v10"></script>
+</body></html>

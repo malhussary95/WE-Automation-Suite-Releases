@@ -1,0 +1,49 @@
+# Secrets
+credentials.json
+ecrm_autosave.json
+.env
+.env.*
+
+# User data
+*.xlsx
+*.xls
+*.xlsm
+*.csv
+*.pdf
+
+# Runtime
+RR_DEBUG/
+webapp/uploads/
+WO Unified/input/
+ECRM/Input/
+logs/
+downloads/
+output/
+outputs/
+results/
+temp/
+tmp/
+
+# Browser/session
+browser_data/
+chrome_profile/
+edge_profile/
+cookies/
+sessions/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+Desktop.ini*.log
+
+Thumbs.db
+Desktop.ini
+*.log

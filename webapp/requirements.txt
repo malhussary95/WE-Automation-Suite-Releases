@@ -1,0 +1,4 @@
+# Web launcher backend only — the automation tools keep their own deps.
+fastapi>=0.110
+uvicorn[standard]>=0.29
+websockets>=12.0

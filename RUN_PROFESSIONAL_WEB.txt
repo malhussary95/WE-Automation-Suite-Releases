@@ -1,0 +1,9 @@
+IMPORTANT
+The old launcher uses port 8000 and can show the old UI.
+Use start_web.bat in this package.
+
+This launcher uses:
+http://127.0.0.1:8010/ecrm?v=20260918-pro-v2
+
+The server also disables /ecrm browser caching.
+Expected UI contains the 🔐 Credentials button.

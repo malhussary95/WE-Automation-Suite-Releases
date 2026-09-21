@@ -1,0 +1,19 @@
+WE AUTOMATION SUITE - WEB ONLY
+=============================
+
+Main application:
+    http://127.0.0.1:8010/
+
+The root page is the WE Automation Suite dashboard. ECRM is a selectable
+component of the suite, not the main application. Other real tools:
+    - ECRM Extractor
+    - WO Extractor (GPON / Fiber)
+    - DB Automation (Validate / Update / Add)
+    - FTTH Portal (real Selenium + web CAPTCHA entry)
+    - PSC Extractor (real Playwright)
+
+Dashboard statistics are calculated from actual execution jobs, persisted job
+metadata and existing generated files. Demo chart values are not used.
+
+Run:
+    start_web.bat
